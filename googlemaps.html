@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Digital Geography Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Google Maps</a></li>
+							<li><a href="generic.html">CartoDB</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Google Maps</h1>
+
+							<div id="map"></div>
+
+							<script type="text/javascript">
+								var map;
+								function initMap() {
+									map = new google.maps.Map(document.getElementById('map'), {
+										mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU, position: google.maps.ControlPosition.TOP_RIGHT},
+										streetViewControl: false,
+										center: {lat: 47.6097, lng: -122.3331},
+										zoom: 11
+									});
+									var kmz = new google.maps.KmlLayer({
+										url: 'http://students.washington.edu/dchung5/geog258_project-2/skateparks_seattle.kmz',
+										map: map
+									});
+								}
+							</script>
+
+							<script async defer
+								src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5KjLQ--wwMwNSTFNEH-_GSi7WHI3U8iE&callback=initMap">
+							</script>
+							
+							<p>The theme for my digital tour was skate parks around the greater Seattle area ranging from Fremont all the way down to the city of Federal Way. All these are parks I have visited and enjoyed a lot and would like other skaters to experience them as well. I made sure to avoid most of the major hotspots and focus on lesser known skate parks or skate spots in order to provide a more diverse tour.</p>
+							<p>	The tour starts in Seattle hitting four different neighborhoods of Seattle and then branches down south. Although a map of just skate parks and skate spots can be made solely in the city of Seattle, Washington has much more than just Seattle I wanted to show that there are great skate scenes outside of the city of Seattle. That’s why we start in a familiar and popular place and branch down to places only locals would go to give a wider perspective on the skateboarding scene in Washington state, not just Seattle. I also wanted to create a tour that all levels of skaters can easily access and use. Some skate parks and skate spots are aimed towards advanced skateboarders so in order to accommodate varying levels of experience, these stops have both the novice and advanced skaters in mind. I didn’t want non-skaters to feel left out either so I chose skate parks that also provide a great experience outside of skateboarding such as Seattle Center with the Space Needle, Cal Anderson with close proximity to Broadway, and Maple Valley skate park’s peaceful greenery. By creating a tour that appeals to a wide range of people, it will expose more people to these public works and possibly allow them to help bring a stronger skateboard community.</p>
+							<p>	The first technique I used to get a smooth user experience was to make a tour that follows a natural flow thus I started from a central hotspot, Seattle, and made the tour flow down towards the less traveled southern part of the Puget Sound. This allows for users be acclimated with a familiar city and slowly travel away from a comfort zone and venturing towards something new. I also include several shapes in the map to outline the neighborhoods these skate parks of Seattle were in to make it more familiar to the user. And, throughout the whole map, there is a route guiding the user to the next point or destination. For the first three destinations, I used a biking route as they were in close proximity to each other. The other destinations were difficult to access without a car so the following destinations are outlined with a driving route instead. I also used color to outline the different “areas” of the map. For the Seattle portion of the tour, each neighborhood had a different color and the shape surrounding the neighborhood had the same corresponding color. As we venture down south, I made the Kent, Covington, and Maple Valley skate parks the same color the signify that they were roughly in the same area and provided a relatively similar experience to each other. I had also changed the icons Cal Anderson and Federal Way Skate Park to indicate places to eat and final destination. By showing users a simple yet effective icons it can convey different perspectives on the different destinations. </p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Contact</h2>
+								<ul class="icons">
+									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="dchung5@uw.edu" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
